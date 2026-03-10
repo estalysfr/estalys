@@ -1,193 +1,286 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Estalys – Assistante administrative</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estalys - Support administratif, réseaux sociaux et création de contenu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
 
-<style>
+    header {
+      background: #1e2a38;
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
 
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f4f6f8;
-color:#333;
-}
+    header h1 {
+      font-size: 54px;
+      margin: 0 0 20px 0;
+    }
 
-header{
-background:#1e2a38;
-color:white;
-padding:60px 20px;
-text-align:center;
-}
+    header p {
+      font-size: 22px;
+      margin: 10px 0;
+    }
 
-header h1{
-font-size:40px;
-margin-bottom:10px;
-}
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
 
-header p{
-font-size:18px;
-}
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 40px;
+    }
 
-section{
-max-width:900px;
-margin:auto;
-padding:60px 20px;
-}
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
 
-h2{
-text-align:center;
-margin-bottom:40px;
-}
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
 
-.services{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-}
-<section>
-<h2>Offres Réseaux Sociaux</h2>
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
 
-<div>
+    .card h3 {
+      margin-top: 0;
+      font-size: 30px;
+    }
 
-<h3>Pack Présence</h3>
-<p>60€/mois</p>
-<ul>
-<li>1 publication par semaine</li>
-<li>Création visuel simple</li>
-<li>Publication</li>
-</ul>
+    .card p, .card li {
+      font-size: 20px;
+      line-height: 1.6;
+    }
 
-<h3>Pack Activité</h3>
-<p>120€/mois</p>
-<ul>
-<li>2 publications par semaine</li>
-<li>Création visuels</li>
-<li>Publication</li>
-<li>Réponse messages simples</li>
-</ul>
+    ul {
+      padding-left: 22px;
+      margin-bottom: 0;
+    }
 
-<h3>Pack Complet</h3>
-<p>200€/mois</p>
-<ul>
-<li>3 publications par semaine</li>
-<li>Visuels + petites vidéos</li>
-<li>Publication</li>
-<li>Réponse messages</li>
-</ul>
+    .hero-button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 24px;
+      background: white;
+      color: #1e2a38;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 18px;
+    }
 
-</div>
+    .highlight {
+      border: 2px solid #1e2a38;
+    }
 
-</section>
-.card{
-background:white;
-padding:30px;
-border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
-}
+    .contact-box {
+      text-align: center;
+    }
 
-.offres{
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:20px;
-}
+    .contact-box a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 24px;
+      background: #1e2a38;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 18px;
+    }
 
-footer{
-background:#1e2a38;
-color:white;
-text-align:center;
-padding:40px;
-margin-top:60px;
-}
+    footer {
+      background: #1e2a38;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+      margin-top: 50px;
+      font-size: 16px;
+    }
 
-button{
-background:#1e2a38;
-color:white;
-padding:12px 20px;
-border:none;
-border-radius:6px;
-cursor:pointer;
-}
+    @media (max-width: 900px) {
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
 
-</style>
+      header h1 {
+        font-size: 40px;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+
+      .card h3 {
+        font-size: 26px;
+      }
+
+      .card p, .card li, header p {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-<h1>Estalys</h1>
-<p>Assistante administrative & gestion des réseaux sociaux</p>
-<p>Pour entreprises locales</p>
-</header>
+  <header>
+    <h1>Estalys</h1>
+    <p>Support administratif, gestion des réseaux sociaux</p>
+    <p>et création de contenu digital.</p>
+    <p>Pour commerces locaux, entrepreneurs et créateurs.</p>
+    <a class="hero-button" href="mailto:contact@estalys.fr">Demander un devis</a>
+  </header>
 
-<section>
-<h2>Services</h2>
+  <section>
+    <h2>Services</h2>
 
-<div class="services">
+    <div class="grid-3">
+      <div class="card">
+        <h3>Administration</h3>
+        <ul>
+          <li>Gestion des emails</li>
+          <li>Organisation administrative</li>
+          <li>Suivi dossiers</li>
+          <li>Classement numérique</li>
+          <li>Service client / SAV</li>
+        </ul>
+      </div>
 
-<div class="card">
-<h3>Assistance administrative</h3>
-<p>
-Gestion des emails<br>
-Organisation documents<br>
-Suivi administratif<br>
-Classement numérique
-</p>
-</div>
+      <div class="card">
+        <h3>Social Media Management</h3>
+        <ul>
+          <li>Création de pages</li>
+          <li>Publications régulières</li>
+          <li>Planification contenu</li>
+          <li>Gestion messages</li>
+          <li>Optimisation profils</li>
+        </ul>
+      </div>
 
-<div class="card">
-<h3>Gestion réseaux sociaux</h3>
-<p>
-Création de pages<br>
-Publications régulières<br>
-Création visuels<br>
-Planification contenus
-</p>
-</div>
+      <div class="card">
+        <h3>Création de contenu</h3>
+        <ul>
+          <li>Visuels réseaux sociaux</li>
+          <li>Montage vidéo</li>
+          <li>Contenu promotionnel</li>
+          <li>Création audio / musique</li>
+          <li>Packs musicaux sur devis</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-</div>
-</section>
+  <section>
+    <h2>Offres Réseaux Sociaux</h2>
 
-<section>
-<h2>Offres</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Pack Présence</h3>
+        <p><strong>60€ / mois</strong></p>
+        <ul>
+          <li>1 publication par semaine</li>
+          <li>Création visuel simple</li>
+          <li>Publication</li>
+        </ul>
+      </div>
 
-<div class="offres">
+      <div class="card highlight">
+        <h3>Pack Activité</h3>
+        <p><strong>120€ / mois</strong></p>
+        <ul>
+          <li>2 publications par semaine</li>
+          <li>Création visuels</li>
+          <li>Publication</li>
+          <li>Réponse messages simples</li>
+        </ul>
+      </div>
 
-<div class="card">
-<h3>Diagnostic</h3>
-<p>Audit rapide de votre présence en ligne et recommandations.</p>
-</div>
+      <div class="card">
+        <h3>Pack Complet</h3>
+        <p><strong>200€ / mois</strong></p>
+        <ul>
+          <li>3 publications par semaine</li>
+          <li>Visuels + petites vidéos</li>
+          <li>Publication</li>
+          <li>Réponse messages</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<div class="card">
-<h3>Mise en place</h3>
-<p>Création ou optimisation de vos réseaux sociaux.</p>
-</div>
+  <section>
+    <h2>Services créatifs</h2>
 
-<div class="card">
-<h3>Gestion mensuelle</h3>
-<p>Gestion complète de vos publications et contenus.</p>
-</div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Création visuelle & vidéo</h3>
+        <ul>
+          <li>Visuels promotionnels</li>
+          <li>Montage vidéo court</li>
+          <li>Contenu pour réseaux sociaux</li>
+          <li>Création de formats adaptés à votre activité</li>
+        </ul>
+      </div>
 
-</div>
-</section>
+      <div class="card">
+        <h3>Audio & contenus sur mesure</h3>
+        <ul>
+          <li>Création audio</li>
+          <li>Packs musicaux</li>
+          <li>Contenus créatifs sur devis</li>
+          <li>Prestations adaptées à votre besoin</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<section style="text-align:center">
+  <section>
+    <h2>Pour qui ?</h2>
 
-<h2>Contact</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Commerces locaux</h3>
+        <p>Restaurants, boutiques, salons, indépendants, artisans, commerces de proximité.</p>
+      </div>
 
-<p>
-Email : contact@estalys.fr
-</p>
+      <div class="card">
+        <h3>Entrepreneurs & créateurs</h3>
+        <p>Entrepreneurs, créateurs de contenu, artistes, marques personnelles et petites structures.</p>
+      </div>
+    </div>
+  </section>
 
-<button>Demander un contact</button>
+  <section>
+    <h2>Contact</h2>
+    <div class="card contact-box">
+      <p>Vous avez besoin d'aide pour votre administratif, vos réseaux sociaux ou votre contenu digital ?</p>
+      <p><strong>Email :</strong> contact@estalys.fr</p>
+      <a href="mailto:contact@estalys.fr">Demander un devis</a>
+    </div>
+  </section>
 
-</section>
-
-<footer>
-
-Estalys – Assistance administrative & réseaux sociaux
-
-</footer>
+  <footer>
+    Estalys - Support administratif, réseaux sociaux et création de contenu digital
+  </footer>
 
 </body>
 </html>
