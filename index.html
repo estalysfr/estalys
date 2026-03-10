@@ -1,419 +1,327 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estalys - Administration, réseaux sociaux et création de contenu</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f6f8;
-      color: #333;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estalys – Support administratif, réseaux sociaux et contenu digital</title>
 
-    header {
-      background: #1e2a38;
-      color: white;
-      padding: 70px 20px;
-      text-align: center;
-    }
+<style>
 
-    header h1 {
-      font-size: 54px;
-      margin: 0 0 20px 0;
-    }
+body{
+font-family:Arial, sans-serif;
+margin:0;
+background:#f4f6f8;
+color:#333;
+}
 
-    header p {
-      font-size: 22px;
-      margin: 10px 0;
-    }
+header{
+background:#1e2a38;
+color:white;
+padding:70px 20px;
+text-align:center;
+}
 
-    .hero-button {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 24px;
-      background: white;
-      color: #1e2a38;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 18px;
-    }
+header h1{
+font-size:48px;
+margin-bottom:15px;
+}
 
-    section {
-      max-width: 1150px;
-      margin: auto;
-      padding: 60px 20px;
-    }
+header p{
+font-size:20px;
+margin:8px 0;
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 40px;
-    }
+section{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
+h2{
+text-align:center;
+margin-bottom:40px;
+font-size:36px;
+}
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    }
+.card{
+background:white;
+padding:28px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
 
-    .card h3 {
-      margin-top: 0;
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
+.card h3{
+margin-top:0;
+font-size:24px;
+}
 
-    .card p,
-    .card li {
-      font-size: 18px;
-      line-height: 1.6;
-    }
+.card p, .card li{
+font-size:17px;
+line-height:1.6;
+}
 
-    ul {
-      padding-left: 22px;
-      margin-bottom: 0;
-    }
+ul{
+padding-left:20px;
+}
 
-    .highlight {
-      border: 2px solid #1e2a38;
-    }
+.highlight{
+border:2px solid #1e2a38;
+}
 
-    .section-intro {
-      text-align: center;
-      max-width: 850px;
-      margin: 0 auto 35px auto;
-      font-size: 19px;
-      line-height: 1.6;
-    }
+.contact{
+text-align:center;
+}
 
-    .contact-box {
-      text-align: center;
-      max-width: 700px;
-      margin: auto;
-    }
+button{
+background:#1e2a38;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:16px;
+}
 
-    button {
-      background: #1e2a38;
-      color: white;
-      padding: 14px 22px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 17px;
-      font-weight: bold;
-      margin-top: 15px;
-    }
+footer{
+background:#1e2a38;
+color:white;
+text-align:center;
+padding:30px 20px;
+margin-top:40px;
+}
 
-    #copy-message {
-      margin-top: 15px;
-      font-weight: bold;
-    }
+@media (max-width:900px){
+.grid{
+grid-template-columns:1fr;
+}
 
-    footer {
-      background: #1e2a38;
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-      margin-top: 50px;
-      font-size: 16px;
-    }
+header h1{
+font-size:36px;
+}
+}
 
-    @media (max-width: 950px) {
-      .grid-3,
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
-
-      header h1 {
-        font-size: 40px;
-      }
-
-      header p,
-      .card p,
-      .card li,
-      .section-intro {
-        font-size: 17px;
-      }
-
-      h2 {
-        font-size: 32px;
-      }
-
-      .card h3 {
-        font-size: 24px;
-      }
-    }
-  </style>
+</style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Estalys</h1>
-    <p>Administration, SAV, gestion des réseaux sociaux</p>
-    <p>et création de contenu digital.</p>
-    <p>Pour commerces locaux, entrepreneurs et créateurs.</p>
-    <a class="hero-button" href="#contact">Demander un devis</a>
-  </header>
+<header>
 
-  <section>
-    <h2>Nos pôles de services</h2>
-    <p class="section-intro">
-      Estalys propose un accompagnement polyvalent pour les structures qui ont besoin
-      d'un support administratif, d'une présence sur les réseaux sociaux et de contenus
-      visuels, vidéo ou audio pour développer leur activité.
-    </p>
+<h1>Estalys</h1>
 
-    <div class="grid-3">
-      <div class="card">
-        <h3>Administration & SAV</h3>
-        <ul>
-          <li>Gestion des emails</li>
-          <li>Organisation administrative</li>
-          <li>Suivi de dossiers</li>
-          <li>Classement numérique</li>
-          <li>Service client / SAV</li>
-        </ul>
-      </div>
+<p>Support administratif, SAV, réseaux sociaux</p>
+<p>et création de contenu digital.</p>
 
-      <div class="card">
-        <h3>Réseaux sociaux</h3>
-        <ul>
-          <li>Création et optimisation de pages</li>
-          <li>Publications régulières</li>
-          <li>Planification de contenu</li>
-          <li>Réponse aux messages simples</li>
-          <li>Gestion de présence en ligne</li>
-        </ul>
-      </div>
+<p>
+Pour commerces locaux, entrepreneurs
+et créateurs de contenu.
+</p>
 
-      <div class="card">
-        <h3>Création de contenu</h3>
-        <ul>
-          <li>Visuels promotionnels</li>
-          <li>Montage vidéo</li>
-          <li>Création de contenu social media</li>
-          <li>Pack son / audio</li>
-          <li>Contenus créatifs sur mesure</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<p style="margin-top:20px;font-weight:bold;">
+Tarif indicatif maximum : 30€ / heure
+</p>
 
-  <section>
-    <h2>Offres Administration & SAV</h2>
-    <p class="section-intro">
-      Pour les structures qui ont besoin d'aide sur l'organisation quotidienne, la relation client
-      et le suivi administratif.
-    </p>
+</header>
 
-    <div class="grid-3">
-      <div class="card">
-        <h3>Pack Support</h3>
-        <p><strong>Sur devis</strong></p>
-        <ul>
-          <li>Gestion emails</li>
-          <li>Classement et organisation</li>
-          <li>Suivi simple</li>
-        </ul>
-      </div>
 
-      <div class="card highlight">
-        <h3>Pack Admin & SAV</h3>
-        <p><strong>Sur devis</strong></p>
-        <ul>
-          <li>Gestion emails</li>
-          <li>Organisation administrative</li>
-          <li>Réponse clients / SAV</li>
-          <li>Suivi dossiers</li>
-        </ul>
-      </div>
+<section>
 
-      <div class="card">
-        <h3>Pack Gestion continue</h3>
-        <p><strong>Sur devis</strong></p>
-        <ul>
-          <li>Support quotidien</li>
-          <li>Administration</li>
-          <li>SAV</li>
-          <li>Suivi global</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<h2>Ce que nous faisons</h2>
 
-  <section>
-    <h2>Offres Réseaux sociaux</h2>
-    <p class="section-intro">
-      Des offres adaptées aux commerces locaux qui veulent simplement être visibles,
-      mais aussi aux entrepreneurs qui recherchent une vraie gestion social media.
-    </p>
+<div class="grid">
 
-    <div class="grid-3">
-      <div class="card">
-        <h3>Pack Présence</h3>
-        <p><strong>60€ / mois</strong></p>
-        <ul>
-          <li>1 publication par semaine</li>
-          <li>Création visuel simple</li>
-          <li>Publication</li>
-        </ul>
-      </div>
+<div class="card">
+<h3>Administration</h3>
+<ul>
+<li>Gestion emails</li>
+<li>Organisation administrative</li>
+<li>Classement documents</li>
+<li>Suivi dossiers</li>
+</ul>
+</div>
 
-      <div class="card">
-        <h3>Pack Activité</h3>
-        <p><strong>120€ / mois</strong></p>
-        <ul>
-          <li>2 publications par semaine</li>
-          <li>Création visuels</li>
-          <li>Publication</li>
-          <li>Réponse messages simples</li>
-        </ul>
-      </div>
+<div class="card">
+<h3>SAV / relation client</h3>
+<ul>
+<li>Réponse clients</li>
+<li>Suivi demandes</li>
+<li>Gestion messages</li>
+<li>Support simple</li>
+</ul>
+</div>
 
-      <div class="card">
-        <h3>Pack Complet</h3>
-        <p><strong>200€ / mois</strong></p>
-        <ul>
-          <li>3 publications par semaine</li>
-          <li>Visuels + petites vidéos</li>
-          <li>Publication</li>
-          <li>Réponse messages</li>
-        </ul>
-      </div>
-    </div>
+<div class="card">
+<h3>Réseaux sociaux</h3>
+<ul>
+<li>Création publications</li>
+<li>Gestion pages</li>
+<li>Planification contenu</li>
+<li>Réponse messages</li>
+</ul>
+</div>
 
-    <div style="margin-top: 30px;" class="grid-2">
-      <div class="card highlight">
-        <h3>Offre Social Media Manager</h3>
-        <p><strong>Sur devis</strong></p>
-        <ul>
-          <li>Gestion plus globale du compte</li>
-          <li>Planification éditoriale</li>
-          <li>Organisation du contenu</li>
-          <li>Suivi régulier de la présence en ligne</li>
-        </ul>
-      </div>
+</div>
 
-      <div class="card">
-        <h3>Offre Social Media sur mesure</h3>
-        <p><strong>Sur devis</strong></p>
-        <ul>
-          <li>Besoin ponctuel ou mensuel</li>
-          <li>Accompagnement adapté à votre activité</li>
-          <li>Gestion plus flexible</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+</section>
 
-  <section>
-    <h2>Offres Création de contenu</h2>
-    <p class="section-intro">
-      Pour les professionnels qui ont besoin de visuels, de vidéos ou de contenus sonores
-      pour leur communication.
-    </p>
 
-    <div class="grid-3">
-      <div class="card">
-        <h3>Visuels</h3>
-        <p><strong>Sur devis</strong></p>
-        <ul>
-          <li>Visuels promotionnels</li>
-          <li>Contenus pour réseaux sociaux</li>
-          <li>Créations adaptées à votre image</li>
-        </ul>
-      </div>
 
-      <div class="card">
-        <h3>Vidéo / Montage</h3>
-        <p><strong>Sur devis</strong></p>
-        <ul>
-          <li>Montage vidéo court</li>
-          <li>Formats réseaux sociaux</li>
-          <li>Contenus promotionnels</li>
-        </ul>
-      </div>
+<section>
 
-      <div class="card">
-        <h3>Pack Son</h3>
-        <p><strong>Sur devis</strong></p>
-        <ul>
-          <li>Création audio</li>
-          <li>Pack musique</li>
-          <li>Contenus sonores personnalisés</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<h2>Offres simples</h2>
 
-  <section>
-    <h2>Pack Premium Estalys</h2>
-    <p class="section-intro">
-      Une offre globale pour les structures qui souhaitent déléguer plusieurs aspects
-      de leur activité à un seul interlocuteur.
-    </p>
+<div class="grid">
 
-    <div class="grid-2">
-      <div class="card highlight">
-        <h3>Pack Premium</h3>
-        <p><strong>Sur devis</strong></p>
-        <ul>
-          <li>Administration</li>
-          <li>SAV / relation client</li>
-          <li>Gestion des réseaux sociaux</li>
-          <li>Création de contenu</li>
-          <li>Accompagnement plus complet</li>
-        </ul>
-      </div>
+<div class="card">
 
-      <div class="card">
-        <h3>Pour qui ?</h3>
-        <ul>
-          <li>Commerces locaux</li>
-          <li>Entrepreneurs</li>
-          <li>Créateurs de contenu</li>
-          <li>Petites structures</li>
-          <li>Clients qui veulent déléguer plusieurs pôles</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<h3>Support administratif</h3>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="card contact-box">
-      <p>Vous avez besoin d'aide pour votre administratif, votre SAV, vos réseaux sociaux ou votre contenu digital ?</p>
-      <p><strong>Email :</strong> <span id="email-text">estalysfr@gmail.com</span></p>
-      <button onclick="copyEmail()">Copier l'adresse email</button>
-      <p id="copy-message"></p>
-    </div>
-  </section>
+<p><strong>90 € / mois</strong></p>
 
-  <footer>
-    Estalys - Administration, SAV, réseaux sociaux et création de contenu digital
-  </footer>
+<ul>
+<li>organisation administrative</li>
+<li>gestion emails simple</li>
+<li>environ 3 heures de travail</li>
+</ul>
 
-  <script>
-    function copyEmail() {
-      navigator.clipboard.writeText("estalysfr@gmail.com");
-      document.getElementById("copy-message").innerText = "Adresse email copiée : estalysfr@gmail.com";
-    }
-  </script>
+</div>
+
+
+<div class="card">
+
+<h3>Gestion réseaux sociaux</h3>
+
+<p><strong>120 € / mois</strong></p>
+
+<ul>
+<li>2 publications par semaine</li>
+<li>création visuels</li>
+<li>publication</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h3>Création contenu</h3>
+
+<p><strong>à partir de 60 €</strong></p>
+
+<ul>
+<li>visuels promotionnels</li>
+<li>montage vidéo court</li>
+<li>contenu réseaux sociaux</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<h2>Création digitale</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Visuels</h3>
+<p>Création de visuels pour réseaux sociaux ou communication.</p>
+</div>
+
+<div class="card">
+<h3>Montage vidéo</h3>
+<p>Montage vidéo court pour réseaux sociaux ou promotion.</p>
+</div>
+
+<div class="card">
+<h3>Pack son</h3>
+<p>Création audio ou pack musique sur mesure.</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<h2>Pack global</h2>
+
+<div class="card highlight">
+
+<h3>Pack Estalys</h3>
+
+<p><strong>à partir de 250 € / mois</strong></p>
+
+<ul>
+<li>support administratif</li>
+<li>SAV / relation client</li>
+<li>gestion réseaux sociaux</li>
+<li>création de contenu</li>
+</ul>
+
+<p>
+Solution pour les entreprises qui souhaitent
+déléguer plusieurs aspects de leur activité.
+</p>
+
+</div>
+
+</section>
+
+
+
+<section class="contact">
+
+<h2>Contact</h2>
+
+<p>
+Toutes nos offres sont modulables.
+Les volumes de travail peuvent être adaptés
+selon vos besoins.
+</p>
+
+<p>
+<strong>Email :</strong> estalysfr@gmail.com
+</p>
+
+<button onclick="copyEmail()">Copier l'adresse email</button>
+
+<p id="copy-msg"></p>
+
+</section>
+
+
+
+<footer>
+
+Estalys – Support administratif, réseaux sociaux et contenu digital
+
+</footer>
+
+
+
+<script>
+
+function copyEmail(){
+navigator.clipboard.writeText("estalysfr@gmail.com");
+document.getElementById("copy-msg").innerText="Adresse email copiée : estalysfr@gmail.com";
+}
+
+</script>
+
 
 </body>
 </html>
