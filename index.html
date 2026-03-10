@@ -1,332 +1,368 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estalys - Support administratif, réseaux sociaux et création digitale</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f6f8;
-      color: #333;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estalys - Support administratif & communication digitale</title>
 
-    header {
-      background: #1e2a38;
-      color: white;
-      padding: 70px 20px;
-      text-align: center;
-    }
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:0;
+  background:#f4f6f8;
+  color:#333;
+}
 
-    header h1 {
-      font-size: 48px;
-      margin: 0 0 15px 0;
-    }
+header{
+  background:#1e2a38;
+  color:white;
+  padding:70px 20px;
+  text-align:center;
+}
 
-    header p {
-      font-size: 20px;
-      margin: 8px 0;
-    }
+header h1{
+  font-size:46px;
+  margin-bottom:15px;
+}
 
-    .hero-button {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 24px;
-      background: white;
-      color: #1e2a38;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 17px;
-    }
+header p{
+  font-size:20px;
+  margin:8px 0;
+}
 
-    section {
-      max-width: 1150px;
-      margin: auto;
-      padding: 60px 20px;
-    }
+.hero-button{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 24px;
+  background:white;
+  color:#1e2a38;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 38px;
-    }
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
 
-    .intro {
-      text-align: center;
-      max-width: 850px;
-      margin: 0 auto 35px auto;
-      font-size: 18px;
-      line-height: 1.6;
-    }
+h2{
+  text-align:center;
+  margin-bottom:20px;
+  font-size:36px;
+}
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
+.intro{
+  text-align:center;
+  max-width:800px;
+  margin:0 auto 35px auto;
+  font-size:18px;
+  line-height:1.6;
+}
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-    }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    }
+.grid-2{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+}
 
-    .card h3 {
-      margin-top: 0;
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
+.card{
+  background:white;
+  padding:28px;
+  border-radius:10px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
 
-    .price {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 18px;
-      color: #1e2a38;
-    }
+.card h3{
+  margin-top:0;
+  font-size:24px;
+}
 
-    .card p,
-    .card li {
-      font-size: 18px;
-      line-height: 1.6;
-    }
+.card p,
+.card li{
+  font-size:17px;
+  line-height:1.6;
+}
 
-    ul {
-      padding-left: 22px;
-      margin-bottom: 0;
-    }
+.price{
+  font-size:22px;
+  font-weight:bold;
+  margin-bottom:12px;
+  color:#1e2a38;
+}
 
-    .highlight {
-      border: 2px solid #1e2a38;
-    }
+ul{
+  padding-left:20px;
+}
 
-    .contact-box {
-      text-align: center;
-      max-width: 700px;
-      margin: auto;
-    }
+.highlight{
+  border:2px solid #1e2a38;
+}
 
-    .contact-button {
-      display: inline-block;
-      background: #1e2a38;
-      color: white;
-      padding: 14px 22px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 15px;
-      font-size: 16px;
-    }
+.contact-box{
+  text-align:center;
+}
 
-    footer {
-      background: #1e2a38;
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-      margin-top: 40px;
-      font-size: 16px;
-    }
+form{
+  max-width:500px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
 
-    @media (max-width: 950px) {
-      .grid-3,
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
+input, textarea{
+  padding:12px;
+  font-size:16px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
 
-      header h1 {
-        font-size: 38px;
-      }
+button{
+  padding:14px;
+  background:#1e2a38;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-weight:bold;
+  font-size:16px;
+  cursor:pointer;
+}
 
-      header p,
-      .card p,
-      .card li,
-      .intro {
-        font-size: 17px;
-      }
+footer{
+  background:#1e2a38;
+  color:white;
+  text-align:center;
+  padding:30px;
+  margin-top:40px;
+}
 
-      h2 {
-        font-size: 30px;
-      }
-
-      .card h3 {
-        font-size: 24px;
-      }
-
-      .price {
-        font-size: 22px;
-      }
-    }
-  </style>
+@media (max-width:900px){
+  .grid, .grid-2{
+    grid-template-columns:1fr;
+  }
+}
+</style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Estalys</h1>
-    <p>Support administratif, SAV, réseaux sociaux</p>
-    <p>et création digitale pour petites structures.</p>
-    <p>Pour commerces locaux, entrepreneurs et créateurs.</p>
-    <a class="hero-button" href="#contact">Demander un devis</a>
-  </header>
+<header>
+<h1>Estalys</h1>
+<p>Support administratif • SAV • réseaux sociaux</p>
+<p>et création digitale pour petites structures.</p>
 
-  <section>
-    <h2>Ce que nous faisons</h2>
-    <p class="intro">
-      Estalys propose un accompagnement simple et flexible pour vous aider à gérer
-      votre administratif, votre relation client, vos réseaux sociaux et vos contenus digitaux.
-    </p>
+<a class="hero-button" href="#contact">
+Demander un devis
+</a>
+</header>
 
-    <div class="grid-3">
-      <div class="card">
-        <h3>Administration</h3>
-        <ul>
-          <li>Gestion des emails</li>
-          <li>Organisation administrative</li>
-          <li>Classement numérique</li>
-          <li>Suivi simple de dossiers</li>
-        </ul>
-      </div>
+<section>
 
-      <div class="card">
-        <h3>SAV / relation client</h3>
-        <ul>
-          <li>Réponse aux demandes clients</li>
-          <li>Gestion messages simples</li>
-          <li>Suivi des échanges</li>
-          <li>Support quotidien</li>
-        </ul>
-      </div>
+<h2>Ce que nous faisons</h2>
 
-      <div class="card">
-        <h3>Réseaux sociaux</h3>
-        <ul>
-          <li>Création de publications</li>
-          <li>Création des visuels</li>
-          <li>Publication</li>
-          <li>Planification de contenu</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<p class="intro">
+Estalys aide les commerces, entrepreneurs et créateurs
+à gérer leur administratif, leur relation client
+et leur présence en ligne.
+</p>
 
-  <section>
-    <h2>Offres principales</h2>
-    <p class="intro">
-      Toutes les offres sont modulables et évolutives selon vos besoins.
-      Si votre activité nécessite plus de volume ou un service spécifique,
-      un devis personnalisé peut être établi.
-    </p>
+<div class="grid">
 
-    <div class="grid-3">
-      <div class="card">
-        <h3>Support administratif</h3>
-        <div class="price">90 € / mois</div>
-        <ul>
-          <li>Organisation administrative</li>
-          <li>Gestion emails simple</li>
-          <li>Environ 3 heures de travail</li>
-        </ul>
-      </div>
+<div class="card">
+<h3>Administration</h3>
+<ul>
+<li>gestion emails</li>
+<li>organisation administrative</li>
+<li>classement documents</li>
+<li>suivi dossiers</li>
+</ul>
+</div>
 
-      <div class="card highlight">
-        <h3>Gestion réseaux sociaux</h3>
-        <div class="price">120 € / mois</div>
-        <ul>
-          <li>2 publications par semaine</li>
-          <li>Création des visuels incluse</li>
-          <li>Publication</li>
-          <li>Volume standard : 8 publications / mois</li>
-        </ul>
-      </div>
+<div class="card">
+<h3>SAV</h3>
+<ul>
+<li>réponse aux clients</li>
+<li>gestion messages</li>
+<li>suivi demandes</li>
+<li>support simple</li>
+</ul>
+</div>
 
-      <div class="card">
-        <h3>Création de contenu</h3>
-        <div class="price">À partir de 60 €</div>
-        <ul>
-          <li>Visuel promotionnel</li>
-          <li>Montage vidéo court</li>
-          <li>Contenu simple pour réseaux sociaux</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<div class="card">
+<h3>Réseaux sociaux</h3>
+<ul>
+<li>création publications</li>
+<li>création visuels</li>
+<li>publication</li>
+<li>planification contenu</li>
+</ul>
+</div>
 
-  <section>
-    <h2>Création digitale</h2>
-    <p class="intro">
-      Prestations à l'unité ou en complément d'une offre mensuelle.
-    </p>
+</div>
 
-    <div class="grid-3">
-      <div class="card">
-        <h3>Visuel réseaux sociaux</h3>
-        <div class="price">20 €</div>
-        <p>Création d'un visuel simple pour communication ou réseaux sociaux.</p>
-      </div>
+</section>
 
-      <div class="card">
-        <h3>Montage vidéo court</h3>
-        <div class="price">60 €</div>
-        <p>Montage vidéo court adapté aux réseaux sociaux ou à la promotion.</p>
-      </div>
 
-      <div class="card">
-        <h3>Pack son</h3>
-        <div class="price">À partir de 80 €</div>
-        <p>Création audio ou pack musique selon le besoin.</p>
-      </div>
-    </div>
-  </section>
+<section>
 
-  <section>
-    <h2>Pack Premium</h2>
-    <p class="intro">
-      Pour les clients qui souhaitent regrouper plusieurs services dans une seule formule.
-    </p>
+<h2>Offres principales</h2>
 
-    <div class="grid-2">
-      <div class="card highlight">
-        <h3>Pack Estalys</h3>
-        <div class="price">À partir de 250 € / mois</div>
-        <ul>
-          <li>Support administratif</li>
-          <li>SAV / relation client</li>
-          <li>Gestion réseaux sociaux</li>
-          <li>Création de contenu</li>
-        </ul>
-      </div>
+<p class="intro">
+Toutes les offres sont modulables selon vos besoins.
+Si votre activité demande plus de volume,
+un devis personnalisé peut être établi.
+</p>
 
-      <div class="card">
-        <h3>Offre modulable</h3>
-        <p>
-          Cette formule est ajustée selon le volume réel de travail et les services souhaités.
-          Elle convient aux clients qui veulent déléguer plusieurs pôles en même temps.
-        </p>
-      </div>
-    </div>
-  </section>
+<div class="grid">
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="card contact-box">
-      <p>Besoin d'aide pour votre administratif, vos réseaux sociaux ou votre contenu digital ?</p>
-      <p><strong>Email :</strong> estalysfr@gmail.com</p>
-      <a class="contact-button" href="mailto:estalysfr@gmail.com?subject=Demande%20de%20devis%20Estalys">
-        Demander un devis
-      </a>
-    </div>
-  </section>
+<div class="card">
+<h3>Support administratif</h3>
+<div class="price">90 € / mois</div>
+<ul>
+<li>organisation administrative</li>
+<li>gestion emails</li>
+<li>environ 3h de travail</li>
+</ul>
+</div>
 
-  <footer>
-    Estalys - Support administratif, réseaux sociaux et création digitale
-  </footer>
+<div class="card highlight">
+<h3>Gestion réseaux sociaux</h3>
+<div class="price">120 € / mois</div>
+<ul>
+<li>2 publications par semaine</li>
+<li>création visuels incluse</li>
+<li>publication</li>
+<li>8 publications / mois</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Création contenu</h3>
+<div class="price">à partir de 60 €</div>
+<ul>
+<li>visuels promotionnels</li>
+<li>montage vidéo court</li>
+<li>contenu réseaux sociaux</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>Création digitale</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Visuel réseaux sociaux</h3>
+<div class="price">20 €</div>
+<p>création d'un visuel simple.</p>
+</div>
+
+<div class="card">
+<h3>Montage vidéo court</h3>
+<div class="price">60 €</div>
+<p>montage vidéo pour réseaux sociaux.</p>
+</div>
+
+<div class="card">
+<h3>Pack son</h3>
+<div class="price">à partir de 80 €</div>
+<p>création audio ou musique.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>Pack Premium</h2>
+
+<div class="grid-2">
+
+<div class="card highlight">
+<h3>Pack Estalys</h3>
+<div class="price">à partir de 250 € / mois</div>
+
+<ul>
+<li>administration</li>
+<li>SAV</li>
+<li>gestion réseaux sociaux</li>
+<li>création contenu</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h3>Offre modulable</h3>
+<p>
+Cette formule est ajustée selon le volume réel de travail
+et les services souhaités.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<h2>Demande de devis</h2>
+
+<p class="intro">
+Expliquez-nous votre besoin et nous vous répondrons rapidement.
+</p>
+
+<form action="https://formspree.io/f/mlgpjlvj" method="POST">
+
+<input
+type="text"
+name="name"
+placeholder="Votre nom"
+required
+>
+
+<input
+type="email"
+name="email"
+placeholder="Votre email"
+required
+>
+
+<textarea
+name="message"
+rows="5"
+placeholder="Votre message"
+required
+></textarea>
+
+<button type="submit">
+Envoyer la demande
+</button>
+
+</form>
+
+</section>
+
+
+<footer>
+Estalys – support administratif et communication digitale
+</footer>
 
 </body>
 </html>
